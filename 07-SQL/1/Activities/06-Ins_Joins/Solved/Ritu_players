@@ -1,0 +1,23 @@
+CREATE TABLE player (
+player_id INT,
+first_name VARCHAR,
+last_name VARCHAR,
+hand VARCHAR,
+birth_date DATE,
+country_code INT
+);
+
+DROP TABLE master_ATP;
+SELECT * FROM player;
+
+-- Create the matches table
+CREATE TABLE matches (
+    loser_age DEC,
+    loser_id INT,
+    loser_name VARCHAR,
+    loser_rank INT,
+    winner_age DEC,
+    winner_id INT,
+    winner_name VARCHAR,
+    winner_rank INT
+);
