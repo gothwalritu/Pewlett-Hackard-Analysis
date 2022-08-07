@@ -15,7 +15,7 @@ D.	The number of employees who are eligible for mentorship.
 
 ## Resources
 
-•	The data was gathered in CSV file and the analysis was performed with relational databases. 
+•	The data was gathered in CSV files and the analysis was performed with relational databases. 
 
 •	We are using QuickDBD to create ERD.
 
@@ -32,7 +32,7 @@ D.	The number of employees who are eligible for mentorship.
 
 ### A.	ERD
 
-Using ERD we created the relationship between different tables which is quite helpful in creating the new tables with which we could perform a better analysis in order to cater the needs of the company. Figure 1 shows the ERD which we have referred to create tables to complete this task.
+Using ERD we mapped the relationship between different tables which was quite helpful in creating the new tables with which we could perform a better analysis in order to cater the needs of the company. Figure 1 shows the ERD which we have referred to create tables to complete this task.
 
 ![Picture_2, ERD]( https://github.com/gothwalritu/Pewlett-Hackard-Analysis/blob/main/module_7_challenge_screenshots/EmployeeDB.png)
 
@@ -42,7 +42,7 @@ Using ERD we created the relationship between different tables which is quite he
 
 ### B.	The list of employees who are retiring.
 
-The screenshot of table is shown in figure 2. The columns in the table are employee number, first name, last name, title, from-date and to-date. To obtain this table we merged employees and titles using inner join, which then filtered by the birth date which should be between ‘1952-01-01’ and ‘1955-12-31’. There is one issue with this table that there are duplicates for employees because working at the company employees might have acquired different roles and hence these titles are listed in the table below.
+The screenshot of table is shown in figure 2. The columns in the table are employee number, first name, last name, title, from-date and to-date. To obtain this table we merged employees and titles tables using inner join, which then filtered by the birth date which should be between ‘1952-01-01’ and ‘1955-12-31’. There is one issue with this table that there are duplicate entries for employees, because while working at the company employees might have acquired different roles and hence all of these titles are listed in the table.
 
 
 ![Picture_2, retirement titles]( https://github.com/gothwalritu/Pewlett-Hackard-Analysis/blob/main/module_7_challenge_screenshots/retirement_titles.csv.png)
@@ -53,7 +53,7 @@ The screenshot of table is shown in figure 2. The columns in the table are emplo
 
 ### C.	Removing the duplicates from the list of retiring employees.
 
-The table for retiring employees shown in figure 3. We removed the duplicate entries in this table using “distinct_on” command. The employees are listed in this table only once by their most recent title.  We ordered the table by the employee number. The table below is having employee number, first name, last name, title, from-date and to date.
+The snapshot of table for retiring employees is shown in figure 3. We removed the duplicate entries in this table using “distinct_on” command. The employees are listed in this table only once by their most recent title.  We ordered the table by the employee number using "ORDER BY" command. The table below is having employee number, first name, last name, title, from-date and to date columns.
 
 
 ![Picture_2, unique titles]( https://github.com/gothwalritu/Pewlett-Hackard-Analysis/blob/main/module_7_challenge_screenshots/unique_titles.png)
@@ -64,7 +64,7 @@ The table for retiring employees shown in figure 3. We removed the duplicate ent
 
 ### D.	Grouping the retiring employee based on their titles.
 
-The table shown in figure 4 is having two columns count and title, which is summarizing the number of employees grouped by their titles. The Senior Engineer has the highest count of 25916, followed by senior staff title count 24926 and least count 2 is for manager. We used GROUP BY command and COUNT command to obtain this table.
+The snapshot of the table shown in figure 4 is having two columns: count and title, summarizing the number of employees grouped by their titles. The Senior Engineer has the highest count of 25916, followed by senior staff title count 24926 and least count 2 is for manager. We used "GROUP BY" command and "COUNT" command to obtain this table.
 
 ![Picture_3, retiring titles]( https://github.com/gothwalritu/Pewlett-Hackard-Analysis/blob/main/module_7_challenge_screenshots/retiring_titles.png)
 
@@ -74,7 +74,7 @@ The table shown in figure 4 is having two columns count and title, which is summ
 
 ### E.	List of retiring employees who are eligible for mentorship program.
 
-The table shown in figure 5 is displaying a list of employees who are eligible for mentorship program. To obtain this table three tables: employees, titles and dep_emp are joined with inner join. ‘WHERE’ command is used to filter the list for the employees whose birth date is in between ‘1965-01-01’ and ‘1965-12-31’. Only current employees are included in that list by using ‘WHERE’ and ‘to date’ filters. The query gave the output result of 1549 rows, which is then sorted with ‘ORDER BY’ command to check if it is most recent.
+The snapshot of table shown in figure 5 is displaying a part of the list of employees who are eligible for mentorship program. To obtain this table, we joined three tables: employees, titles and dep_emp with inner join. ‘WHERE’ command is used to filter the list for the employees whose birth date is in between ‘1965-01-01’ and ‘1965-12-31’. Only current employees are included in that list by using ‘WHERE’ and ‘to date’ filters. The query gave the output result of 1549 rows, which is then sorted with ‘ORDER BY’ command to check if it is most recent.
 
 ![Picture_5, mentorship eligibility]( https://github.com/gothwalritu/Pewlett-Hackard-Analysis/blob/main/module_7_challenge_screenshots/mentorship_eligibility.png)
 
@@ -86,7 +86,7 @@ The table shown in figure 5 is displaying a list of employees who are eligible f
 
 1.	How many roles will need to be filled as the "silver tsunami" begins to make an impact?
 
-The table shown in figure 4 for retiring titles gives the information on how many employees will be retiring for a particular role and the same numbers of employees will be required to fill up these positions. Following are the numbers.
+The table for retiring titles gives the information on how many employees will be retiring for a particular role and the same numbers of employees will be required to fill up these positions. Following are the numbers.
 
 •	For “Senior Engineer”: 25916
 
@@ -112,7 +112,7 @@ In the present task there was no such query that could have answered this questi
 #### Figure 6
 
 
-However, if we increase the filtering limit for eligibility criteria i.e. the birth date of the employee from one year (1965-01-01) to two years i.e. “1964” to “1965-12-31”, we will be having enough employee available for the mentorship. there will be only one manager short on mentorship program, also shown in figure 7.
+However, if we increase the filtering limit for eligibility criteria i.e. the birth date of the employee from one year (1965-01-01) to two years i.e. “1964” to “1965-12-31”, we will be having enough employee available for the mentorship. There will be only one manager short on mentorship program, also shown in figure 7.
 
 ![Picture_6, mentorship available]( https://github.com/gothwalritu/Pewlett-Hackard-Analysis/blob/main/module_7_challenge_screenshots/mentors_available.png)
 
