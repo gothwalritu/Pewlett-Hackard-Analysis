@@ -19,7 +19,7 @@ D.	The number of employees who are eligible for mentorship.
 
 •	We are using QuickDBD to create ERD.
 
-•	PostreSQL, which is a database system. 
+•	PostgreSQL, which is a database system. 
 
 •	pgAdmin 13, a GUI using SQL Language.
 
