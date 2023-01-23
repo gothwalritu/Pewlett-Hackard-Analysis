@@ -6,7 +6,7 @@ The purpose of this exercise is to analyze the data for Pewlette-Hackard which i
 
 A.	Develop an entity-relationship  diagram (ERD) and Schema
 
-B.	Identify the employee who will be retiring.
+B.	Identify the employee who will be retiring and will need the retirement package
 
 C.	The sum of employees grouped by title who will be retiring.
 
